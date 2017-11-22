@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Worker Demo</title>
+<meta charset="utf-8"/>
+<script>
+  var myworker;
+  function init()
+  {
+    if(typeof(Worker) != "undefined")
+    {
+      document.getElementById("support").innerHTML = "Great! This browser supports Web Workers";
+      myworker = new Worker("dotask2.js");
+      myworker.addEventListener("message",workerMsg,true);      
+    }
+    else
+    {
+      document.getElementById("support").innerHTML = "Oops! This browser does not support Web Workers";
+    }
+  }
+
+var res = [];
+ function workerMsg(e)
+ {
+   document.getElementById("divInfo").innerHTML = "<br/>" + e.data;
+   
+   for(var i = 1; i<=5; i++) {
+    res.push(e.data);
+    window.localStorage.setItem("results", res);
+   document.getElementById("storageInfo").innerHTML = "Local Storage " + window.localStorage.getItem("results");
+ }
+ console.log(localStorage.clickcount);
+ }
+
+ 
+function btn3Click()
+ {
+  var obj = {
+    input : document.getElementById("inputCurr").value,
+    output: document.getElementById("outputCurr").value,
+    units : document.getElementById("units").value
+}
+   myworker.postMessage(obj);
+ }
+
+</script>
+</head>
+<body onload="init()">
+<h3>Example for Web Workers</h3>
+<div id="support"></div>
+<form id"form1">
+  <input type="input"  id="inputCurr" />
+  <input type="input" id="outputCurr" />
+  <input type="input"  id="units" onclick="btn3Click()">
+   <input type="button" value="Calc" id="btn3" onclick="btn3Click()">
+</form>
+<p></p>
+<div id="divInfo"></div>
+<div id="storageInfo"></div>
+</body>
+</html>
