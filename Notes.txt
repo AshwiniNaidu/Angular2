@@ -1,0 +1,74 @@
+Nov 20'2017
+
+*** ANGRY BIRDS - CHROME ****
+
+CSS Versions
+Core Objects of JavaScript
+FormData()
+Constraint Validation API - HTML5 Form Validation
+RSS Feeds
+
+Server Sent Events - Uni directional
+WebSockets-
+*  Bi directional
+* Port - 81
+* Secure Port - 815
+
+----------------------------------
+* self - Current browser window reference
+self vs this
+
+
+https://github.com/AshwiniNaidu/Angular2.git
+
+_________________________________________
+
+Nov 21'2017
+
+Declarative vs Imperative Programming
+Dart - JS?
+ES6 Compatible Table - kangax.github.io
+Reference Counting - JS
+Template Literals
+CSS3 - Content
+
+JAVASCRIPT ENGINES
+ - Chakra
+ - SpiderMonkey
+ - JS Core
+
+VS Code - Editor
+
+*************************************************
+
+Angular2 SETUP
+
+1. NodeJS Installation
+2. npm install -g @angular/cli
+
+******************************************
+Dependencies in package.json:
+core-js : for module loading 
+zone-js : replacement for $digest
+
+
+Eventemitter() - NodeJS/Angular
+titlecase Filter in Angular4
+
+*******************************
+communication b/w components possible?
+multiple module files?
+ 	
+
+************************************
+Nov 22' 2017
+
+Elvis Operator - angular2
+Forms - Template Driven and Model Driven
+ -- Template driven - -FormsModule
+ -- Model Driven  - ReactiveFormsModule
+Lifecycle hooks - Create, update, destroy (Component/Directive)
+
+
+
+
