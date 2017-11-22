@@ -10,6 +10,7 @@ import { TempConvertPipe } from './tempConvert.pipe';
 import { myFirstCustomDirective } from './demo.directive';
 import { RoundBorderComponent } from './roundborder.component';
 import { PostsService } from './posts.service';
+import { CreditCardPipe } from './creditCard.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PostsService } from './posts.service';
     CounterComponent,
     TempConvertPipe,
     myFirstCustomDirective,
-    RoundBorderComponent
+    RoundBorderComponent,
+    CreditCardPipe
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,9 @@ import { Posts } from './posts.model';
   {{ today  | date: 'longDate' }} <br />
   {{ today | date: 'EEEE, MMMM, d, yyyy' | uppercase }}<br /><br />
   <span> Numerical Pipe/Filter - {{num | number: '3.1-2' }} </span> <br /><br />
+  <span> Credit Card Pipe/Filter </span>
+  <input type="text" [(ngModel)]='cc' />  
+  <span style="font-weight: bold">  {{ cc | creditCard }} </span><br /><br />
   <span> Custom Pipe/Filter - {{37 | tempConvert}}</span><br /><br /><hr/>
   <span><strong>Custom Component</strong></span><br/>
   <random-quote></random-quote><hr/>
@@ -77,6 +80,7 @@ import { Posts } from './posts.model';
 export class AppComponent {
   title = 'My World';
   today = new Date(); 
+  cc: number = 323456789256923;
   num: number = 18266.56666;
   imgUrl = "../assets/img01.jpg";
   imgWidth = 175;
